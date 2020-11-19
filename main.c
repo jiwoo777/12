@@ -1,24 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
 	
-	int i = 0;
-	char str[4];
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
+	char src[] = " The worst things to eat before you sleep";
+	char dst[100]; 
 	
-	printf("%s\n", str);
+	char str[30] = "happy C programming";
 	
-	//while (현재 문자 (str[1])이 맨 끝이 아님){ print로 현재 문자 하나 출력; i를 1 증가  
-	while (str[i]!= '\0') {
-	printf("%c", str[i]);
-		i++;
-	}
+	//<복사 대상 문자열> = strcpy(<대상>, <원본>);
+	strcpy(dst,src); 
+		
+	printf("copied string : %s\n", dst);
 	
+
+	printf("length of\"%s\" : %i\n", str, strlen(str));
+ 
+ 
 	return 0;
 }
