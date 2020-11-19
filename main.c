@@ -12,16 +12,16 @@ int main(int argc, char *argv[]) {
 	fp = fopen("sample.txt", "w");
 	if(fp == NULL)
 	{
-		return -1; 
+		return -1;
 	}
-	
-	for(i=0; i<3; i++)
-	{
-	    printf("Input a word : ");
-    	scanf("%s", str); 
-	    fprintf(fp, "%s\n", str);
-    }
-	fclose(fp);
- 
+	 
+	 for (i=0; i<3; i++)
+	 {
+	 	printf("Input a word :");
+	 	scanf("%s", str);
+	 	fprintf(fp, "%s\n", str);
+	 }
+	 fclose(fp);
+	 
 	return 0;
 }
